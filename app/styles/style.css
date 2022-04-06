@@ -1,26 +1,33 @@
-/*Variabili globali e import*/
-:root {
-    --sfondo_card: #fbfafa;
-    --due: #b1bad6;
-    --whitey: #d7d7d7;
-    --tre: #7531e6;
-    --quattro: #db5353;
-    --sfondo: #353858;
-    --hint:#7531e6;
-    --hintshadow:#7531e69c;
-    --chall:#cb2a48;
-    --challshadow:#e631319c;
-    --base:#292530;
-    --baseshadow:#2b2a2c9c;
+/*utilities*/
+.w3{
+    max-width: 15em;
 }
+.centerflex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.centerflexm{
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.holder{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    align-items: center;
+    justify-content: center;
+}
+
 /*Preferenze generali*/
 html{
-    background-color: black;
-    font-family: 'Rubik', sans-serif;
-    color: var(--sfondo_card);
     height: 100%;
     width: 100%;
     overflow: hidden;
+    background-color: #2a2a2a;
 }
 body{
     margin: 0em;
@@ -30,43 +37,36 @@ body{
     overflow:hidden;
 }
 section{
-    background-color: var(--sfondo);
-    padding: 1.5em;
+    padding: 2em;
     height: -webkit-fill-available;
+    width: -webkit-fill-available;
     transition: 0.3s opacity, 0.3s transform;
     opacity: 0;
     display: none;
     transform: translateX(50%);
-    max-width: 380px;
 }
 section.onopacity{
     opacity: 1;
     transform: translateX(0%);
 }
-h1,h2,h3,h4,h5,h6{
-    user-select: none;
-    font-family: 'Cairo', sans-serif;
+.header {
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-i{
-    font-size: 2.8em;
-}
-
 /*-----------LANDING----------*/
 #landing{
     position: absolute;
     top: 0px;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: -webkit-fill-available;
-    padding-top: 1em !important;
 }
 #landing.on{
     display: flex;
 }
 #landing > div.header > img {
-    width: 26%;
-    right: 1.5em;
-    position: absolute;
+    width: 5em;
 }
 #landing > div.header > h1 {
     font-size: 2em;
@@ -74,7 +74,6 @@ i{
 }
 #landing > div.content > h4 {
     font-size: 1.5em;
-    font-family: 'Rubik';
 }
 #landing > .content {
     margin-top: 2em;
@@ -82,31 +81,4 @@ i{
     flex-wrap: wrap;
     justify-content: center;
 }
-#landing > .content > input {
-    font-size: 3em;
-    width: 5em;
-    letter-spacing: 0.2em;
-    text-align: center;
-    border-radius: 15px;
-    font-family: 'Rubik';
-}
-#landing > .content > button {
-    font-size: 2em;
-    background-color: var(--tre);
-    text-align: center;
-    border: none;
-    color: white;
-    margin: 1em;
-    border-radius: 51px;
-    padding: 0.5em 1em 0.5em 1em;
-    font-family: 'Rubik';
-}
 
-#landing > div.content > div {
-    margin: auto;
-    margin-top:5em;
-    display: flex;
-    opacity: 0.6;
-    flex-basis: 100%;
-    justify-content: center;
-}
