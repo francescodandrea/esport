@@ -82,3 +82,85 @@ section.onopacity{
     justify-content: center;
 }
 
+/*-----------MAIN----------*/
+#teamholder{
+    height: -webkit-fill-available;
+    gap: 1em;
+}
+.team{
+    display: flex;
+    background-color: #4c5156;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    border-radius: 0.5em;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+}
+.player{
+    position: relative;
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+    border: white 4px solid;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.player > .remove{    
+    position: absolute;
+    background-color: #ffffff61;
+    border: none;
+    font-size: 1em;
+    color: white;
+    border-radius: 2em;
+    height: 2em;
+    width: 2em;
+    top: 1em;
+    right: 1em;
+}
+.add{
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 4.5em;
+    background-color: #ffffff14;
+    border-radius: inherit;
+}
+.add > button {   
+    background-color: #ffffff61;
+    border: none;
+    font-size: 1em;
+    color: white;
+    border-radius: 2em;
+    height: 2em;
+    width: 2em;
+    margin-top: 0.5em;
+}
+
+/*playercolors*/
+.player.p1{
+    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+}
+.player.p2{
+    background-image: linear-gradient( 135deg, #FEB692 10%, #EA5455 100%);
+}
+.player.p3{
+    background-image: linear-gradient( 135deg, #90F7EC 10%, #32CCBC 100%);
+}
+.player.p4{
+    background-image: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%);
+}
+.player.p5{
+    background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+}
+.player.p6{
+    background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%);
+}
