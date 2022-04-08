@@ -38,6 +38,38 @@
 
 <script>
 
+let games=[{}];
+games[0].stand=12;
+games[0].player=342;
+games[0].score=-5;
+//postGame(games);
+
+function postGame(games){
+  const xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      let response=JSON.parse(this.responseText);
+      console.log(response);
+    }
+  };
+  xhttp.open("POST", "https://script.google.com/macros/s/AKfycbx4GRxJ30lZJXySfRzEZwdAEXP2CLeSV4GpHpvkNEuLhxABkZeQhpUKoHkKUut6v0sn/exec?r=game");
+  xhttp.send(JSON.stringify(games));
+}
+
+getGame("342");
+
+function getGame(pid){
+  const xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      let response=JSON.parse(this.responseText);
+      console.log(response);
+    }
+  };
+  xhttp.open("GET", "https://script.google.com/macros/s/AKfycbx4GRxJ30lZJXySfRzEZwdAEXP2CLeSV4GpHpvkNEuLhxABkZeQhpUKoHkKUut6v0sn/exec?r=game&p="+pid);
+  xhttp.send();
+}
+
 let team=document.querySelector(".team");
 let player=document.querySelector(".player");
 let container=document.querySelector("#teamholder");
